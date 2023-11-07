@@ -1,58 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>W3.CSS Template</title>
-     <link rel="stylesheet" href="./styles.css">
+     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
-    <meta name<="viewport" content="width=device-width, initial-scale=1">
- <link rel="preconnect" href="https://fonts.googleapis.com">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&family=MuseoModerno&family=Raleway&display=swap"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&family=MuseoModerno&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
   </head>
 
-<body>
- <style> 
-.card {
-    margin: 100px 50px;
-    right: 20%;
-    background-color: rgb(241, 234, 224);
-    box-shadow: 4px 4px 8px 9px rgb(255, 10, 10);
-    transition: 0.3s;
-    width: 340px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.card video {
-    display: block;
-    margin: 0 auto;
-}
-
-.card:hover {
-    box-shadow: 4px 4px 8px 9px rgba(0, 255, 0, 0.9);
-}
-
-.container {
-    padding: 2px;
-}
-
-.text-container {
-    padding: 20px;
-}
-h4 {
-    font-size: 28px;
-    font-family: 'Montserrat', sans-serif;
-    
-}
-p{
-    font-size: 20px;
-    text-align: justify;
-    font-family: 'Raleway', sans-serif; 
-}
-</style>
-  
+<header> 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -81,7 +42,52 @@ p{
 
   <a href="./contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
-
+</header>
+<body> 
+  <style> 
+    body{
+       background-color: black;
+       width:100%;
+       height:auto
+   }
+   .card {
+       margin: 100px 50px;
+       right: 20%;
+       background-color: rgb(241, 234, 224);
+       box-shadow: 4px 4px 8px 9px rgb(255, 10, 10);
+       transition: 0.3s;
+       width: 340px;
+       border-radius: 5px;
+       text-align: center;
+   }
+   
+   .card video {
+       display: block;
+       margin: 0 auto;
+   }
+   
+   .card:hover {
+       box-shadow: 4px 4px 8px 9px rgba(0, 255, 0, 0.9);
+   }
+   
+   .container {
+       padding: 2px;
+   }
+   
+   .text-container {
+       padding: 20px;
+   }
+   h4 {
+       font-size: 28px;
+       font-family: 'Montserrat', sans-serif;
+       
+   }
+   p{
+       font-size: 20px;
+       text-align: justify;
+       font-family: 'Raleway', sans-serif; 
+   }
+   </style> 
 <div class="card">
     <div class="container">
         <video width="320" height="240" controls>
@@ -94,7 +100,7 @@ p{
         </div>
     </div>
 </div>
-  
+
 <script>
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
@@ -113,6 +119,5 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
-
 </body>
 </html>
