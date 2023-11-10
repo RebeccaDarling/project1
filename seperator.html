@@ -6,6 +6,10 @@
 <body>
     <h1>Excel Splitter</h1>
     <input type="file" id="excelFile" accept=".xlsx">
+    <label for="outputFolder">Choose an output folder: </label>
+    <input type="file" id="outputFolder" webkitdirectory directory multiple>
+    <label for="columnName">Column Name for Separation: </label>
+    <input type="text" id="columnName">
     <button onclick="splitExcel()">Split Excel</button>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
