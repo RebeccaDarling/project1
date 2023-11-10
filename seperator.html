@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Excel Splitter</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Web Excel Splitter</h1>
+
+    <input type="file" id="excelFileInput">
+    <button id="splitButton" disabled>Split and Save Excel File</button>
+
+    <p id="statusMessage"></p>
+
+    <script>
+        const excelFileInput = document.getElementById('excelFileInput');
+        const splitButton = document.getElementById('splitButton');
+        const statusMessage = document.getElementById('statusMessage');
+
+        let excelData; // Placeholder for the loaded Excel data
+
+        excelFileInput.addEventListener('change', function() {
+            const file = excelFileInput.files[0];
+            if (file) {
+                // Here you can process the file using JavaScript
+                // For example, you can use SheetJS library to read the Excel data
+                // You need to implement this part for your use case
+                excelData = processExcelFile(file);
+
+                // Enable the "Split and Save Excel File" button
+                splitButton.removeAttribute('disabled');
+            }
+        });
+
+        splitButton.addEventListener('click', function() {
+            if (excelData) {
+                // Prompt the user to select a folder for saving
+                const saveFolderInput = document.createElement('input');
+                saveFolderInput.type = 'file';
+                saveFolderInput.style.display = 'none';
+                saveFolderInput.setAttribute('webkitdirectory', 'true');
+
+                saveFolderInput.addEventListener('change', function(e) {
+                    const selectedFolderPath = e.target.files[0].path;
+                    // Use selectedFolderPath to save the file in the chosen folder using JavaScript
+                    // Implement your save logic here
+                    statusMessage.textContent = 'Excel file saved in folder: ' + selectedFolderPath;
+                });
+
+                saveFolderInput.click();
+            }
+        });
+
+        function processExcelFile(file) {
+            // Implement code to process the Excel file using SheetJS or other libraries
+            // Return the processed data for further use
+            // This is just a placeholder for demonstration purposes
+            return 'Processed Excel Data';
+        }
+    </script>
+</body>
+</html>
